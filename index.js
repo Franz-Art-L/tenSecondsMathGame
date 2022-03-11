@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    Swal.fire('Welcome to Ishoboy 10 seconds Math Game!');
     var currentRandomQuestion;
     var timeRemaining = 10;
     var interval;
@@ -27,8 +28,10 @@ $(document).ready(() => {
         if (!interval) {
 
             if (timeRemaining === 0) {
+
                 updateTimeRemaining(10);
                 updateCurrentScore(-currentScore);
+
             }
 
             interval = setInterval(() => {

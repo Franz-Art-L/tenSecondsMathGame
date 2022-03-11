@@ -11,22 +11,33 @@
     <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css " integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn " crossorigin="anonymous ">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
     <link rel="stylesheet " href="styles.css ">
-    <script src="index.js "></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <script src="index.js"></script>
 </head>
 
 <body>
-    <h1 class="text-center ">10 seconds Math Game</h1>
+    <div class="container w-77 mt-1 pb-1" style="border: black solid; background-color: white; border-radius: 20px;">
+        <h1 class="text-center" style="font-weight: bolder;">10 seconds Math Game</h1>
+        <br>
+        <h4 class="text-center">How fast can you calculate? 😅
+        </h4>
+    </div>
 
-    <div class="container ">
-        <div class="row overflow ">
+    <div id="main-container" class="container w-77 mt-4 pb-4 d-flex flex-column justify-content-center shadow bg-light rounded">
+        <div style="background-color: palegoldenrod;" class="row overflow ">
             <div class="col-12">
 
                 <br>
 
-                <div id="scores">
-
-                    <p>High score: <span id="topScoreSpan"></span></p>
-                    <p>Current Score: <span id="currentScoreSpan"></span></p>
+                <div class="d-flex justify-content-between" id="scores">
+                    <div style="border: blue solid; border-radius: 7px; background-color: aqua;">
+                        <p>Current Score <br> <span style="position: relative; left: 85px;" id="currentScoreSpan"></span></p>
+                    </div>
+                    <div style="border: blue solid; border-radius: 7px; background-color: aqua;">
+                        <p>High Score <br> <span style="position: relative; left: 63px;" id="topScoreSpan"></span></p>
+                    </div>
 
                 </div>
 
@@ -34,22 +45,25 @@
 
                 <div class="d-flex flex-column justify-content-center">
                     <div class="d-flex justify-content-center" id="countdownDiv">
-                        <p>Time left: <span id="timeRemainingElement"></span></p>
+                        <div style="border: blue solid; border-radius: 7px; background-color: rgb(7, 10, 36);">
+                            <p style="font-family: monospace; font-size: 32px; color: red;"> TIME 🕙 <br> <span id="timeRemainingElement">0</span></p>
+                        </div>
 
                     </div>
 
                     <br>
 
-                    <div class="d-flex justify-content-center" id="questionDiv">
+
+                    <div class="d-flex justify-content-center" style="font-size: 60px;" id="questionDiv">
 
                     </div>
 
                     <br>
 
-                    <div class="d-flex justify-content-center" id="divForUserInput ">
+                    <div class="d-flex justify-content-center" id="divForUserInput">
 
 
-                        <input id="user-answer" type="number" title="type the number of your answer" />
+                        <input id="user-answer" type="number" placeholder="enter your answer" title="type the number of your answer" />
 
                     </div>
 
@@ -60,10 +74,12 @@
         </div>
     </div>
 
-    <hr style="width: 50%;">
+
+    <br>
+
     <footer>
-        <div class="text-center">
-            <span class="text-muted small ©">Built by © <a href="https://confident-murdock-8e5bba.netlify.app/" target="_blank" rel="noopener noreferrer">Francis Artemio Landia</a>. 2022.</span>
+        <div class="text-center" style="background-color: white; border: black solid;">
+            <span class="text-muted small © ">Built by © <a href="https://confident-murdock-8e5bba.netlify.app/ " target="_blank " rel="noopener noreferrer ">Francis Artemio Landia</a>. 2022.</span>
         </div>
 
     </footer>

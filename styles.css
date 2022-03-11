@@ -1,3 +1,38 @@
+body {
+    background-image: url(images/solvingMath.gif);
+}
+
 h1 {
-    color: red;
+    color: #29741f;
+    font-family: serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 45px;
+    margin: 0;
+}
+
+#main-container {
+    background-color: #29741f;
+}
+
+#scores {
+    font-family: monospace;
+    font-size: 24px;
+}
+
+#currentScoreSpan {
+    position: relative;
+    left: 85px;
+}
+
+#topScoreSpan {
+    position: relative;
+    left: 59px;
+}
+
+#timeRemainingElement {
+    position: relative;
+    font-size: 50px;
+    color: white;
+    left: 50px;
 }
