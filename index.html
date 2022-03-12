@@ -15,14 +15,17 @@
     <script src="sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     <script src="index.js"></script>
+    <script>
+        alert("Wekcome To Ishoboy 10 Seconds Math Game!");
+        alert("Let's see how fast you can calculate 🤣")
+    </script>
 </head>
 
 <body>
-    <div class="container w-77 mt-1 pb-1" style="border: black solid; background-color: white; border-radius: 20px;">
+    <div class="container w-77 mt-1 pb-0 justify-content-center" style="border: black solid; background-color: white;">
         <h1 class="text-center" style="font-weight: bolder;">10 seconds Math Game</h1>
         <br>
-        <h4 class="text-center">How fast can you calculate? 😅
-        </h4>
+
     </div>
 
     <div id="main-container" class="container w-77 mt-4 pb-4 d-flex flex-column justify-content-center shadow bg-light rounded">
@@ -63,10 +66,29 @@
                     <div class="d-flex justify-content-center" id="divForUserInput">
 
 
-                        <input id="user-answer" type="number" placeholder="enter your answer" title="type the number of your answer" />
+                        <input id="user-answer" type="number" placeholder="Enter your answer" title="type the number of your answer" />
 
                     </div>
 
+                    <br>
+
+                    <div class="text-center">
+                        <button class="btn btn-outline-danger" id="newGameButton" title="click to reset the game">New Game</button>
+                    </div>
+
+                    <div id="audioDiv">
+
+                        <audio id="gameOver" src="soundsEffects/Game Over Super Mario Sound Effect.mp3"></audio>
+
+                        <audio src="soundsEffects/dreamy-inspiring-electronic-15015.mp3" id="backgroundMusic"></audio>
+
+                        <audio src="soundsEffects/correct-6033.mp3" id="correctAnswer"></audio>
+
+                        <audio src="soundsEffects/negative_beeps-6008.mp3" id="wrongAnswer"></audio>
+
+                        <audio src="soundsEffects/ed01064d-0040-4c48-84a7-0a1cd9c59ade.mp3" id="newTopScore"></audio>
+
+                    </div>
 
                 </div>
 
@@ -78,8 +100,8 @@
     <br>
 
     <footer>
-        <div class="text-center" style="background-color: white; border: black solid;">
-            <span class="text-muted small © ">Built by © <a href="https://confident-murdock-8e5bba.netlify.app/ " target="_blank " rel="noopener noreferrer ">Francis Artemio Landia</a>. 2022.</span>
+        <div class="text-center container w-77 mt-1 pb-0 justify-content-center " style="border: black solid; background-color: white; ">
+            <span class="text-muted small © ">Built by <a href="https://confident-murdock-8e5bba.netlify.app/ " target="_blank " rel="noopener noreferrer ">Francis Artemio Landia</a>. 2022.</span>
         </div>
 
     </footer>

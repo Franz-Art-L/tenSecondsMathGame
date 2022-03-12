@@ -1,5 +1,19 @@
 $(document).ready(() => {
-    Swal.fire('Welcome to Ishoboy 10 seconds Math Game!');
+    // Welcome introduction
+    // Mechanics
+    Swal.fire({
+        title: "Answer the random MATH equation as fast as you can, you are only given 10 seconds, if your answer is correct, additional 1 second is added to the countdown.",
+        text: "As of now ONLY ADDITION(+) OPERATOR IS AVAILABLE. Coming Soon: Subtraction(-), Multiplication(*), and Division(/). Enjoy!!!",
+        position: "center",
+        backdrop: "linear-gradient(grey, blue)",
+        background: "white",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        showConfirmButton: false,
+        showCancelButton: false,
+        timer: 10000
+    });
     var currentRandomQuestion;
     var timeRemaining = 10;
     var interval;
@@ -25,6 +39,7 @@ $(document).ready(() => {
 
     var gameBegins = () => {
         updateTopScore(0);
+        document.getElementById('backgroundMusic').play();
         if (!interval) {
 
             if (timeRemaining === 0) {
@@ -41,6 +56,14 @@ $(document).ready(() => {
                 if (timeRemaining === 0) {
                     clearInterval(interval);
                     interval = undefined;
+                    document.getElementById('backgroundMusic').pause();
+                    document.getElementById('gameOver').play();
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Time is up!',
+                        text: 'Game over! you ran out of time. :D',
+                        footer: 'Hope you enjoy the Game! :)'
+                    })
                 }
             }, 1000)
         }
@@ -68,10 +91,13 @@ $(document).ready(() => {
 
     var checkUserAnswer = (userInput, result) => {
         if (userInput === result) {
+            document.getElementById('correctAnswer').play();
             renderNewRandomQuestion();
             $('#user-answer').val('');
             updateTimeRemaining(+1);
             updateCurrentScore(+1);
+        } else if (userInput != result) {
+            document.getElementById('wrongAnswer').play();
         }
     }
 
@@ -83,10 +109,35 @@ $(document).ready(() => {
     var updateTopScore = () => {
         if (currentScore > topScore) {
             topScore = currentScore;
+            document.getElementById('newTopScore').play();
         }
         $('#topScoreSpan').text(topScore);
     }
 
-    renderNewRandomQuestion();
+    var resetTopScore = () => {
+        topScore = 0;
+        $('#topScoreSpan').text(topScore);
+    }
 
+    var resetCurrentScore = () => {
+        currentScore = 0;
+        $('#currentScoreSpan').text(currentScore);
+    }
+
+    var resetTime = () => {
+        timeRemaining = 10;
+        $('#timeRemainingElement').text(timeRemaining);
+    }
+
+    var newGameButton = document.querySelector('#newGameButton');
+
+    newGameButton.addEventListener('click', () => {
+        resetTopScore();
+        resetCurrentScore();
+        resetTime();
+        renderNewRandomQuestion();
+        gameBegins();
+    });
+
+    renderNewRandomQuestion();
 });

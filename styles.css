@@ -5,14 +5,16 @@ body {
 h1 {
     color: #29741f;
     font-family: serif;
-    font-size: 45px;
-    font-weight: normal;
-    line-height: 45px;
+    font-size: 33px;
+    font-weight: bolder;
+    line-height: 63px;
     margin: 0;
+    height: 43px;
 }
 
 #main-container {
     background-color: #29741f;
+    border: black solid;
 }
 
 #scores {
@@ -35,4 +37,8 @@ h1 {
     font-size: 50px;
     color: white;
     left: 50px;
+}
+
+input {
+    font-size: 19px;
 }
