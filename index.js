@@ -2,7 +2,7 @@ $(document).ready(() => {
     // Welcome introduction
     // Mechanics
     Swal.fire({
-        title: "Answer the random MATH equation as fast as you can, you are only given 10 seconds, if your answer is correct, additional 1 second is added to the countdown.",
+        title: "Answer the random Math equation as fast as you can, you are only given 10 seconds. If your answer is correct, additional 1 second is added to the countdown.",
         text: "As of now ONLY ADDITION(+) OPERATOR IS AVAILABLE. Coming Soon: Subtraction(-), Multiplication(*), and Division(/). Enjoy!!!",
         position: "center",
         backdrop: "linear-gradient(grey, blue)",
@@ -61,7 +61,7 @@ $(document).ready(() => {
                     Swal.fire({
                         icon: 'error',
                         title: 'Time is up!',
-                        text: 'Game over! you ran out of time. :D',
+                        text: "I'm sorry my friend, you ran out of time. :D",
                         footer: 'Hope you enjoy the Game! :)'
                     })
                 }
