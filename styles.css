@@ -39,6 +39,15 @@ h1 {
     left: 50px;
 }
 
-input {
+#user-answer {
     font-size: 19px;
+}
+
+.operatorSpanChoices {
+    font-size: 20px;
+}
+
+.operatorInputChoices {
+    height: 16px;
+    width: 16px;
 }

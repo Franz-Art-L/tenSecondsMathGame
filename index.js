@@ -12,7 +12,7 @@ $(document).ready(() => {
         allowEnterKey: false,
         showConfirmButton: false,
         showCancelButton: false,
-        timer: 10000
+        timer: 8000
     });
     var currentRandomQuestion;
     var timeRemaining = 10;
